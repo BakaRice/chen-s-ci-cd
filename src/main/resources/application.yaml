@@ -1,0 +1,26 @@
+
+server:
+  port: 8001
+
+# datatsource
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: NEFU
+    url: jdbc:mysql://test.ricemarch.com:3306/shppo?serverTimeZone=GMT%2B8
+  profiles:
+    active: dev
+#mybatis-plus
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: id_worker
+
+logging:
+  level:
+    root: warn
+    com.ricemarch: debug
+  pattern:
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
